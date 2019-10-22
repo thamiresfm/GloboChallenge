@@ -1,4 +1,4 @@
-# selenium_csharp_basic
+# selenium_csharp_bdd_challenge
 DESAFIO AUTOMAÇÃO SITE GLOBO EM BDD - SELENIUM - C# .NET
 
 Desafio básico realizado com o intuito de estudo e novos conhecimentos. 
