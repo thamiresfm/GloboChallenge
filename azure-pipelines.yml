@@ -1,6 +1,6 @@
 variables:
-  project_name:'GloboImprensa'
-  netcore_version:'2.2'
+  project_name: 'GloboImprensa'
+  netcore_version: '2.2'
 
 jobs:
   - job: Build
