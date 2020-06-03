@@ -24,15 +24,14 @@ jobs:
         inputs:
           solution: '**/*.sln'
 
-- job: Run
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
+      - task: VSTest@2
+        inputs:
+          testSelector: 'testAssemblies'
+          testAssemblyVer2: |
+            **\*test*.dll
+            !**\*TestAdapter.dll
+            !**\obj\**
+          searchFolder: '$(System.DefaultWorkingDirectory)'
 
 
   
