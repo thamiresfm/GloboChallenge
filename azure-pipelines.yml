@@ -6,8 +6,7 @@ jobs:
   - job: Build
     steps:
       - script: | 
-          # msbuild  GloboImprensa.sln
-          msbuild GloboImprensa.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder:Clean
+
           # pwd && ls -la
           # dotnet restore
           # dotnet publish -c Release -o bin/Release/netcoreapp$(netcore_version)
