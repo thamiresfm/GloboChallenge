@@ -24,10 +24,6 @@ jobs:
         inputs:
           solution: '**/*.sln'
 
-      - task: VisualStudioTestPlatformInstaller@1
-        inputs:
-          packageFeedSelector: 'nugetOrg'
-          versionSelector: 'latestPreRelease'
 
   
 
