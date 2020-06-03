@@ -23,3 +23,12 @@ jobs:
       - task: MSBuild@1
         inputs:
           solution: '**/*.sln'
+
+
+  - job: Teste
+
+  
+  - job: Run
+  
+
+  
