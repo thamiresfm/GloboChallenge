@@ -25,6 +25,10 @@ jobs:
           solution: '**/*.sln'
 
 
-  
+      - task: VSTest@2
+        inputs:
+          testSelector: 'testRun'
+          searchFolder: '$(System.DefaultWorkingDirectory)'
+          vsTestVersion: '16.0'
 
   
