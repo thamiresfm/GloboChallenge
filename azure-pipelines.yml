@@ -26,11 +26,7 @@ jobs:
 
       - task: VSTest@2
         inputs:
-          testSelector: 'testAssemblies'
-          testAssemblyVer2: |
-            **\*test*.dll
-            !**\*TestAdapter.dll
-            !**\obj\**
+          testSelector: 'testRun'
           searchFolder: '$(System.DefaultWorkingDirectory)'
 
 
