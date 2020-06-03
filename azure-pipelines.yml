@@ -24,10 +24,10 @@ jobs:
         inputs:
           solution: '**/*.sln'
 
-      - task: DotNetCoreCLI@2
+      - task: VisualStudioTestPlatformInstaller@1
         inputs:
-          command: 'run'
-
+          packageFeedSelector: 'nugetOrg'
+          versionSelector: 'latestPreRelease'
 
   
 
