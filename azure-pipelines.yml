@@ -3,7 +3,7 @@ variables:
   netcore_version:'2.2'
 
 jobs:
-  - job:Build
+  - job: Build
   steps:
     - script: |
         pwd && ls -la
