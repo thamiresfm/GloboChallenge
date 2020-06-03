@@ -5,12 +5,13 @@ variables:
 jobs:
   - job: Build
     steps:
-      - script: |
-          pwd && ls -la
-          dotnet restore
-          dotnet publish -c Release -o bin/Release/netcoreapp$(netcore_version)
-          mkdir artifact
-          cp -r $(project_name)/bin/Release/netcore$(netcore_version) artifact/$(Build.SorceBrancName)
+      - script: | 
+          msbuild  GloboImprensa.sln
+          # pwd && ls -la
+          # dotnet restore
+          # dotnet publish -c Release -o bin/Release/netcoreapp$(netcore_version)
+          # mkdir artifact
+          # cp -r $(project_name)/bin/Release/netcore$(netcore_version) artifact/$(Build.SorceBrancName)
 
         # displayName: Build Application
         # - task: PublishPipelineArtifact@1
