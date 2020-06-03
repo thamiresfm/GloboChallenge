@@ -14,7 +14,7 @@ jobs:
 
         displayName: Build Application
         - task: PublishPipelineArtifact@1
-          displayName: Store Application Artifact
-          inputs:
+        displayName: Store Application Artifact
+        inputs:
           path: $(System.DefaultWorkingDirectory)/artifact
           artifact: $(project_name)
