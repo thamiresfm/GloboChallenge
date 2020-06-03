@@ -26,9 +26,13 @@ jobs:
 
 
   - job: Teste
-
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TEST-*.xml'
   
   - job: Run
+  
   
 
   
