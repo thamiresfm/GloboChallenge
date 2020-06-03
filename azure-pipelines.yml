@@ -24,10 +24,9 @@ jobs:
         inputs:
           solution: '**/*.sln'
 
-      - task: VSBuild@1
+      - task: DotNetCoreCLI@2
         inputs:
-          solution: '**\*.sln'
-          vsVersion: '16.0'
+          command: 'run'
 
 
   
