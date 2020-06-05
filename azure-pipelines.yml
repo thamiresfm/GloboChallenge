@@ -6,14 +6,14 @@ jobs:
   - job: Build
     steps:
       - script: | 
-      dotnet restore
-      dotnet publish GloboChallenge.sln -c Release
+         dotnet restore
+         dotnet publish GloboChallenge.sln -c Release
 
   - job: Test
     dependsOn: Build
     steps:
       - script: | 
-      dotnet test GloboChallenge.sln
+          dotnet test GloboChallenge.sln
 
 
               
