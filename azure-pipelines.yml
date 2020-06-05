@@ -6,22 +6,19 @@ jobs:
   - job: Build
     steps:
       - script: | 
+      dotnet restore
+      dotnet publish GloboChallenge.sln -c Release
 
-          # pwd && ls -la
-          # dotnet restore
-          # dotnet publish -c Release -o bin/Release/netcoreapp$(netcore_version)
-          # mkdir artifact
-          # cp -r $(project_name)/bin/Release/netcore$(netcore_version) artifact/$(Build.SorceBrancName)
+  - job: Test
+    dependsOn: Build
+    steps:
+      - script: | 
+      dotnet test GloboChallenge.sln
 
-        # displayName: Build Application
-        # - task: PublishPipelineArtifact@1
-        # displayName: Store Application Artifact
-        # inputs:
-        #   path: $(System.DefaultWorkingDirectory)/artifact
-        #   artifact: $(project_name)
+
               
-      - task: MSBuild@1
-        inputs:
-          solution: '**/*.sln'
+      # - task: MSBuild@1
+      #   inputs:
+      #     solution: '**/*.sln'
 
   
